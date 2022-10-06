@@ -12,12 +12,24 @@ const SwitchPage = (props) => {
 
     // Creating a function for navigating to the users page 
     let navigateUsers = (id) => {
-        navigate({
-            pathname: "/users", 
-            search: createSearchParams({
-                id: id
-            }).toString()
+            // Connect to the second database using the link 
+        fetch(`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`)
+        .then(data => {
+            return data.json(); 
         })
+        .then(data => {
+            data = JSON.stringify(data); 
+            // Navigate 
+            navigate({
+                pathname: "/users", 
+                search: createSearchParams({
+                    id: id, 
+                    data: data
+                }).toString()
+            })
+        })
+
+        
     }
     
     let pageCount = props.props.pageCount; 
