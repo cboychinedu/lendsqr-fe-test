@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Importing the necesary modules 
+import React, { useState } from 'react';
+import "./index.css"; 
+import ReactDOM from 'react-dom';
+import Home from "./Components/Home";
+import Users from "./Components/Users"; 
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom"; 
+import Dashboard from './Components/Dashboard';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Getting the root element 
+const rootElement = document.getElementById("root"); 
+
+// Render 
+ReactDOM.render(
+  <BrowserRouter> 
+    <Routes> 
+        <Route exach path="/" element={<Home /> } /> 
+        <Route path="/dashboard" element={<Dashboard /> } /> 
+        <Route path="/users" element={<Users />} /> 
+    </Routes>
+  </BrowserRouter>, 
+
+  rootElement
+); 

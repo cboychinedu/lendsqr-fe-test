@@ -1,0 +1,62 @@
+.modalContainer {
+    height: 630px;
+    position: absolute;
+    background-color: #fbfbfbf5;
+    width: 279px;
+    border-radius: 7px;
+    border: 1px solid #b7b7b7;
+}
+label {
+    font-size: 18px;
+    color: #545F7D
+}
+.modalForm {
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 14px;
+}
+.organization, 
+.username, 
+.email, 
+.date, 
+.phoneNumber, 
+.status {
+    width: 230px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #b3b7bf;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+.buttonsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.filterBtn,
+.resetBtn {
+    width: 98px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+.filterBtn {
+    background-color: #39CDCC;
+    color: white; 
+}
+.resetBtn {
+    color: #545F7D; 
+}
+.resetBtn {
+    border: 1px solid #545F7D;
+}
+.close {
+    padding-left: 258px;
+    margin-top: 8px;
+    margin-bottom: -12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #515376;
+}

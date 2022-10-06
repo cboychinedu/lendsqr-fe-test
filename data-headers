@@ -1,0 +1,40 @@
+accountBalance
+accountNumber
+createdAt
+education
+email
+guarantor
+lastActiveDate
+orgName
+phoneNumber
+userName
+
+
+
+<ul className="table-header"> 
+                            <li class="t-header"> 
+                            ORGANIZATION <img src={filter} className="filter-image"/> 
+                            </li>
+                            <li class="t-header"> USERNAME <img src={filter} className="filter-image"/> </li>
+                            <li class="t-header"> EMAIL <img src={filter} className="filter-image"/> </li>
+                            <li class="t-header"> PHONE NUMBER <img src={filter} className="filter-image"/> </li>
+                            <li class="t-header"> DATE JOINED <img src={filter} className="filter-image"/>  </li>
+                            <li class="t-header"> STATUS <img src={filter} className="filter-image"/>  </li>
+                        </ul>
+                        
+                        
+/* table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+     
+    th,
+    td {
+        padding: 20px;
+    }
+     
+    th {
+        text-align: left;
+    } */
