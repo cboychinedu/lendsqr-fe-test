@@ -182,7 +182,7 @@ const Users = (props) => {
                         </ul>
                     </div>
 
-                    <div className="dashboard-doc"> 
+                    <div className="dashboard-doc-users"> 
                         <section className="data-section"> 
                             <div> 
                                 <h2 className="users-para"> Users </h2>
@@ -378,6 +378,39 @@ const Users = (props) => {
 
                                     <div className="item">
                                          
+                                    </div>
+                                   
+                                </div>
+
+                                <hr class="horizontal-divider" /> 
+
+                                <div className="education"> 
+                                    <h1 className="header"> Guarantor </h1>
+                                </div>
+
+                                <div className="personal-information"> 
+                                    <div className="item"> 
+                                        <h2 className="sub-header"> FULL NAME </h2> < br/> 
+                                        <p> Grace Effiom </p>
+                                    </div>
+
+                                    <div className="item">
+                                        <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
+                                        <p> 07060780922 </p> 
+                                    </div>
+
+                                    <div className="item"> 
+                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
+                                        <p> grace@gmail.com </p>
+                                    </div>
+
+                                    <div className="item"> 
+                                        <h2 className="sub-header"> RELATIONSHIP </h2> < br/> 
+                                        <p> 0345e0503039392 </p>
+                                    </div>
+
+                                    <div className="item">
+                                        
                                     </div>
                                    
                                 </div>

@@ -137,14 +137,24 @@ li.list-items:hover {
     background-color: white;
     border: none; 
 }
+.dashboard-doc-users {
+    height: 1732px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
 
 .second-div {
-    height: 36px;
-    width: 400px;
+    height: 197%;
+    width: auto;
+    display: flex;
+    border: 2px solid black;
+    margin-top: -23px;
+    align-items: center;
+    justify-content: space-between;
 }
 .data-section-second-div-users {
     margin-top: 30px;
-    height: 1024px;
+    height: auto;
     background-color: white;
     width: auto;
     border-radius: 5px;
