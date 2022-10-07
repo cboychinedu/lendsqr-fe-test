@@ -17,6 +17,7 @@ lendsqr-fe-test
 
 
 <p align="center"><img src="./src/Images/screenshot3.png" /></p>
+<p align="center"><img src="./src/gif/motion.gif" /></p>
 
 <p align="center"><img src="./src/Images/screenshot1.png" /></p>
 
