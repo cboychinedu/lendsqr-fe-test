@@ -11,6 +11,7 @@ class DashboardData extends Component {
     // setting the state 
     state = {
         datas: [], 
+        store: [],  
         pageCount: 1, 
         filterStatus: false, 
         Modalstatus: false, 
@@ -37,8 +38,6 @@ class DashboardData extends Component {
         this.setState({
             Modalstatus: true, 
         })
-
-        console.log(this.state.datas); 
        
     }
 

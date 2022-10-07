@@ -40,9 +40,6 @@ const Users = (props) => {
     // Converting back into json 
     data = JSON.parse(data); 
 
-    console.log(data); 
-
-
     // Render the home page 
     return (
         <React.Fragment> 
@@ -222,6 +219,31 @@ const Users = (props) => {
                                
                                 
                                 <div className="second-div"> 
+                                    <div className="selections highlight-selections"> 
+                                        <p> General Details </p>
+                                    </div>
+
+                                    <div className="selections">
+                                        <p> Documents </p>
+                                    </div> 
+
+                                    <div className="selections"> 
+                                        <p> Bank Details </p>
+                                    </div>
+
+                                    <div className="selections"> 
+                                        <p> Loans </p>
+                                    </div>
+
+                                    <div className="selections"> 
+                                        <p> Savings </p>
+                                    </div>
+
+                                    <div className="selections"> 
+                                        <p> App and System </p>
+                                    </div>
+
+
                                 </div>
 
                             </div>
