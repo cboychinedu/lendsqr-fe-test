@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1>
 <img src="./src/Images/logo.png" style="height: 20px;" alt="image"> 
 lendsqr-fe-test 
 </h1>
