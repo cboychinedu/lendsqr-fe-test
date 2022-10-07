@@ -10,6 +10,20 @@
 
 
 <hr/>
+mbonuchinedum-lendsqr-fe-test
+https://mbonuchinedum-lendsqr-fe-test.herokuapp.com/
+
+## Pusing to Heroku 
+
+```
+$ heroku login
+$ heroku create 
+$ heroku rename <"app-new-name">
+$ git add .  
+$ git push heroku master 
+
+```
+
 
 
 
