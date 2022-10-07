@@ -17,7 +17,6 @@ lendsqr-fe-test
 
 
 <p align="center"><img src="./src/Images/screenshot3.png" /></p>
-<p align="center"><img src="./src/gif/motion.gif" /></p>
 
 <p align="center"><img src="./src/Images/screenshot1.png" /></p>
 
@@ -61,6 +60,12 @@ $ heroku rename <"app-new-name">
 $ git add .  
 $ git push heroku master 
 ```
+<br>
+
+## Working Principle 
+<p> The gif image below explains how the application functions. <p> 
+<p align="center"><img src="./src/gif/motion.gif" /></p>
+
 <br>
 
 ## Download & Installation 
