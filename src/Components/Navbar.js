@@ -33,6 +33,7 @@ const Navbar = (props) => {
                         </button>
                     </div>
                     <div className="profile-div"> 
+                    <NavLink to="/dashboard"> Dashboard </NavLink> 
                         <NavLink to="#"> Docs </NavLink> 
                         <NavLink to="#"> 
                             <img src={alarm} /> 

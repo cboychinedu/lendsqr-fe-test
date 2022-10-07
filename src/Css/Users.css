@@ -108,9 +108,10 @@ ul li:hover {
 }
 .first-div {
     height: 173px;
-    width: 284px;
+    width: auto;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 .user-image {
     height: 100px;
@@ -121,6 +122,12 @@ ul li:hover {
 }
 .list-items {
     line-height: 27px;
+    
+}
+.list-items-heading {
+    color: #213F7D; 
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .divider {
@@ -139,7 +146,7 @@ li.list-items:hover {
 }
 .dashboard-doc-users {
     height: 1732px;
-    width: 100%;
+    width: 85%;
     background-color: #f1f1f1;
 }
 
@@ -158,25 +165,27 @@ li.list-items:hover {
     background-color: white;
     width: auto;
     border-radius: 5px;
-    padding: 40px 40px 40px 40px;
+    padding: 40px 40px 40px 80px;
 }
 .personal-information {
     display: flex;
-    justify-content: space-evenly;
     height: 103px;
     margin-top: 35px;
     margin-bottom: 46px;
+    justify-content: flex-start;
+    align-items: center;
 }
 .education {
     margin-top: 20px; 
 }
 .item {
-    width: 200px;
+    width: 543px;
     height: 66px;
     display: grid;
     margin-top: 4px;
     line-height: 0px;
     padding-top: 24px;
+    margin-right: 20px;
 }
 .horizontal-divider {
     border: 1px solid #e7e7e7cf;
@@ -188,4 +197,23 @@ li.list-items:hover {
 .header {
     color: #213F7D; 
     font-size: 16px;
+   
+}
+.star {
+    margin-top: 10px; 
+    display: flex;
+    justify-content: space-evenly;
+}
+.para {
+    color: #545F7D;
+    font-weight: lighter; 
+    font-size: 15px;
+}
+.para:hover {
+    font-size: 15px;
+}
+.para-information {
+    color: #545F7D; 
+    font-size: 16px; 
+    font-weight: 600; 
 }

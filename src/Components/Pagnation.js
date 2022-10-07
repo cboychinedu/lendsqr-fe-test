@@ -1,6 +1,6 @@
 // Importing the necessary modules  
 import "../Css/DashboardData.css"
-import React, { Component } from "react"; 
+import React from "react"; 
 import { createSearchParams, Link, useNavigate} from "react-router-dom";
 
 
@@ -71,7 +71,7 @@ const SwitchPage = (props) => {
                     props.props.datas.slice(20, 40).map((item, i) => {
                         return (
                             <React.Fragment>
-                                <tr className="table-data" id={item["id"]}> 
+                                <tr className="table-data" id={item["id"]} onClick={ () => navigateUsers(item["id"])}> 
                                     <td className="table-data"> { item["orgName"] } </td>  
                                     <td> { item["userName"] } </td>
                                     <td> { item["email"] } </td>
@@ -96,7 +96,7 @@ const SwitchPage = (props) => {
                     props.props.datas.slice(40, 60).map((item, i) => {
                         return (
                             <React.Fragment>
-                                <tr className="table-data" id={item["id"]}> 
+                                <tr className="table-data" id={item["id"]} onClick={ () => navigateUsers(item["id"])}> 
                                     <td className="table-data"> { item["orgName"] } </td>  
                                     <td> { item["userName"] } </td>
                                     <td> { item["email"] } </td>
@@ -121,7 +121,7 @@ const SwitchPage = (props) => {
                     props.props.datas.slice(60, 80).map((item, i) => {
                         return (
                             <React.Fragment>
-                                <tr className="table-data" id={item["id"]}> 
+                                <tr className="table-data" id={item["id"]} onClick={ () => navigateUsers(item["id"])}> 
                                     <td className="table-data"> { item["orgName"] } </td>  
                                     <td> { item["userName"] } </td>
                                     <td> { item["email"] } </td>
@@ -146,7 +146,7 @@ const SwitchPage = (props) => {
                     props.props.datas.slice(80, 100).map((item, i) => {
                         return (
                             <React.Fragment>
-                                <tr className="table-data" id={item["id"]}> 
+                                <tr className="table-data" id={item["id"]} onClick={ () => navigateUsers(item["id"])}> 
                                     <td className="table-data"> { item["orgName"] } </td>  
                                     <td> { item["userName"] } </td>
                                     <td> { item["email"] } </td>
@@ -171,7 +171,7 @@ const SwitchPage = (props) => {
                     props.props.datas.slice(100, 200).map((item, i) => {
                         return (
                             <React.Fragment>
-                                <tr className="table-data" id={item["id"]}> 
+                                <tr className="table-data" id={item["id"]} onClick={ () => navigateUsers(item["id"])}> 
                                     <td className="table-data"> { item["orgName"] } </td>  
                                     <td> { item["userName"] } </td>
                                     <td> { item["email"] } </td>

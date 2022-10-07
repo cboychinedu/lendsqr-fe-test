@@ -1,10 +1,10 @@
 // Importing the necesary modules 
-import React, { useState } from 'react';
+import React from 'react';
 import "./index.css"; 
 import ReactDOM from 'react-dom';
 import Home from "./Components/Home";
 import Users from "./Components/Users"; 
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom"; 
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Dashboard from './Components/Dashboard';
 
 

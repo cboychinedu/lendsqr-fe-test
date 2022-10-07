@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/alt-text */
 // Importing the necessary modules 
-import React, { Component } from "react"; 
+import React from "react"; 
 import "../Css/Home.css"; 
-import { NavLink, Link } from "react-router-dom";
 import loginImage from "../Images/signin-logo.jpg"; 
 import logo from "../Images/logo.png"; 
 import logoOne from "../Images/logo-one.png"; 

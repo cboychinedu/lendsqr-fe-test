@@ -1,11 +1,10 @@
 // Importing the necessary modules  
 import "../Css/DashboardData.css"
-import { useState } from "react";
 import filter from "../Images/filter.png"; 
 import React, { Component } from "react"; 
 import Pagination from "./Pagnation"; 
 import Modal from "./Modal";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Creating a ui component for the react dashboard page 
 class DashboardData extends Component {

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 // Importing the necessary modules 
-// Importing the necessary modules 
-import React, { Component } from "react"; 
+import React from "react"; 
 import { NavLink } from "react-router-dom";
 import brifcase from "../Images/briefcase.png"; 
 import home from "../Images/home.png"; 
@@ -14,6 +13,9 @@ import loanProducts from "../Images/loan-products.png";
 import karma from "../Images/karma.png"; 
 import savings from "../Images/savings.png"; 
 import reports from "../Images/reports.png"; 
+import starOne from "../Images/star1.png"; 
+import starTwo from "../Images/star2.png"; 
+import starThree from "../Images/star3.png"; 
 import savingProducts from "../Images/saving-products.png"; 
 import feesandcharges from "../Images/fees-and-charges.png"; 
 import transactions from "../Images/transactions.png"; 
@@ -24,28 +26,21 @@ import preferences from "../Images/preferences.png";
 import feesandpricing from "../Images/fees-and-pricing.png"; 
 import auditlogs from "../Images/audit-logs.png"; 
 import loanRequest from "../Images/loan_request.png"; 
-import user from "../Images/user.png"; 
-import users from "../Images/users.png"; 
-import activeUsers from "../Images/active-users.png"; 
-import usersWithLoans from "../Images/users-with-loans.png"; 
-import userWithSavings from "../Images/users-with-savings.png"; 
 import Navbar from "./Navbar";
-import DashboardData from "./DashboardData";
-import axios from 'axios'; 
 import "../Css/Users.css"; 
-import { useSearchParams, useParams } from 'react-router-dom';
-
+import { useSearchParams } from 'react-router-dom';
 
 
 // Creating the ui component 
 const Users = (props) => {
     // Getting the user's id 
     const [searchparams] = useSearchParams(); 
-    const userId = searchparams.get("id"); 
     let data = searchparams.get("data"); 
 
     // Converting back into json 
     data = JSON.parse(data); 
+
+    console.log(data); 
 
 
     // Render the home page 
@@ -190,12 +185,12 @@ const Users = (props) => {
                             <div className="data-section-first-div-users"> 
                                 <div className="first-div">
                                     <div className="username-image"> 
-                                        <img src={user} className="user-image" /> 
+                                        <img src={data["profile"]["avatar"]} className="user-image" /> 
                                     </div> 
                                     <div className="username-div"> 
                                         <ul> 
-                                            <li className="list-items"> Grace Effiong </li>
-                                            <li className="list-items"> LSQRDEDEDODI </li>
+                                            <li className="list-items list-items-heading"> {data["profile"]["firstName"]} {data["profile"]["lastName"]} </li>
+                                            <li className="list-items para"> {data["profile"]["address"]} </li>
                                         </ul>
                                     </div>
                                    
@@ -203,8 +198,14 @@ const Users = (props) => {
 
                                     <div className="username-div"> 
                                         <ul> 
-                                            <li className="list-items"> User Tier </li>
-                                            <li className="list-items"> ********** </li>
+                                            <li className="list-items list-items-heading"> {data["userName"]} </li>
+                                            <li className="list-items"> 
+                                                <div className="star"> 
+                                                    <img src={starOne} /> 
+                                                    <img src={starTwo} /> 
+                                                    <img src={starThree} /> 
+                                                </div>
+                                             </li>
                                         </ul>
                                     </div>
 
@@ -212,8 +213,8 @@ const Users = (props) => {
 
                                     <div className="username-div"> 
                                         <ul> 
-                                            <li className="list-items"> N200,000.00 </li>
-                                            <li className="list-items account-number"> 9912345685748/Providus Bank </li>
+                                            <li className="list-items list-items-heading"> ₦{data["accountBalance"]} </li>
+                                            <li className="list-items account-number para"> {data["accountNumber"]}/Providus Bank </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -235,55 +236,53 @@ const Users = (props) => {
                                 <div className="personal-information"> 
                                     <div className="item"> 
                                         <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <p className="para-information"> {data["profile"]["firstName"]} {data["profile"]["lastName"]} </p>
                                     </div>
 
                                     <div className="item">
                                         <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <p className="para-information"> {data["phoneNumber"]} </p> 
                                     </div>
 
                                     <div className="item"> 
                                         <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <p className="para-information"> {data["email"]} </p>
                                     </div>
 
                                     <div className="item"> 
                                         <h2 className="sub-header"> BVN </h2> < br/> 
-                                        <p> 0345e0503039392 </p>
+                                        <p className="para-information"> {data["profile"]["bvn"]} </p>
                                     </div>
 
                                     <div className="item">
                                         <h2 className="sub-header"> GENDER </h2> < br/> 
-                                        <p> Female </p> 
+                                        <p className="para-information"> {data["profile"]["gender"]} </p> 
                                     </div>
                                    
                                 </div>
 
                                 <div className="personal-information"> 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <h2 className="sub-header"> MARITAL STATUS </h2> < br/> 
+                                        <p className="para-information"> ------ </p>
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <h2 className="sub-header"> CHILDREN </h2> < br/> 
+                                        <p className="para-information"> ------- </p> 
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <h2 className="sub-header"> TYPE OF RESIDENCE </h2> < br/> 
+                                        <p className="para-information"> ------- </p>
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> BVN </h2> < br/> 
-                                        <p> 0345e0503039392 </p>
+                                        
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> GENDER </h2> < br/> 
-                                        <p> Female </p> 
+                                        
                                     </div>
                                    
                                 </div>
@@ -296,56 +295,53 @@ const Users = (props) => {
 
                                 <div className="personal-information"> 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <h2 className="sub-header"> LEVEL OF EDUCATION </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["level"]} </p>
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <h2 className="sub-header"> EMPLOYMENT STATUS  </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["employmentStatus"]} </p> 
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <h2 className="sub-header"> SECTOR OF EMPLOYMENT </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["sector"]} </p>
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> BVN </h2> < br/> 
-                                        <p> 0345e0503039392 </p>
+                                        <h2 className="sub-header"> DURATION OF EMPLOYMENT </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["duration"]} </p>
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> GENDER </h2> < br/> 
-                                        <p> Female </p> 
+                                       
                                     </div>
                                    
                                 </div>
 
                                 <div className="personal-information"> 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <h2 className="sub-header"> OFFICE EMAIL </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["officeEmail"]} </p>
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <h2 className="sub-header"> MONTHLY INCOME </h2> < br/> 
+                                        <p className="para-information"> ₦{data["education"]["monthlyIncome"][0]} - ₦{data["education"]["monthlyIncome"][1]}   </p> 
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <h2 className="sub-header"> LOAD REPAYMENT </h2> < br/> 
+                                        <p className="para-information"> {data["education"]["loanRepayment"]} </p>
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> BVN </h2> < br/> 
-                                        <p> 0345e0503039392 </p>
+                                        
                                     </div>
 
                                     <div className="item"> 
-                                        {/* <h2> BVN </h2> < br/> 
-                                        <p> 0345e0503039392 </p> */}
+                                       
                                     </div>
                                    
                                 </div>
@@ -358,18 +354,18 @@ const Users = (props) => {
 
                                 <div className="personal-information"> 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <h2 className="sub-header"> TWITTER </h2> < br/> 
+                                        <p className="para-information"> {data["socials"]["twitter"]} </p>
                                     </div>
 
                                     <div className="item">
-                                        <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <h2 className="sub-header"> FACEBOOK </h2> < br/> 
+                                        <p className="para-information"> {data["socials"]["facebook"]} </p> 
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <h2 className="sub-header"> INSTAGRAM </h2> < br/> 
+                                        <p className="para-information"> {data["socials"]["instagram"]} </p>
                                     </div>
 
                                     <div className="item"> 
@@ -391,22 +387,22 @@ const Users = (props) => {
                                 <div className="personal-information"> 
                                     <div className="item"> 
                                         <h2 className="sub-header"> FULL NAME </h2> < br/> 
-                                        <p> Grace Effiom </p>
+                                        <p className="para-information"> {data["guarantor"]["firstName"]} {data["guarantor"]["lastName"]}</p>
                                     </div>
 
                                     <div className="item">
                                         <h2 className="sub-header"> PHONE NUMBER </h2> < br/> 
-                                        <p> 07060780922 </p> 
+                                        <p className="para-information"> {data["guarantor"]["phoneNumber"]} </p> 
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> EMAIL ADDRESS </h2> < br/> 
-                                        <p> grace@gmail.com </p>
+                                        <h2 className="sub-header"> ADDRESS </h2> < br/> 
+                                        <p className="para-information"> {data["guarantor"]["address"]} </p>
                                     </div>
 
                                     <div className="item"> 
-                                        <h2 className="sub-header"> RELATIONSHIP </h2> < br/> 
-                                        <p> 0345e0503039392 </p>
+                                        <h2 className="sub-header"> GENDER </h2> < br/> 
+                                        <p className="para-information"> {data["guarantor"]["gender"]} </p>
                                     </div>
 
                                     <div className="item">
@@ -414,10 +410,6 @@ const Users = (props) => {
                                     </div>
                                    
                                 </div>
-
-
-                              <p> {data["accountBalance"]}</p>
-                              <p> {data["accountNumber"] }</p>
 
                             </div>
 
