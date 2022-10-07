@@ -1,4 +1,7 @@
-<h1> lendsqr-fe-test </h1>
+<h1 align="center">
+<img src="./src/Images/logo.png" style="height: 20px;" alt="image"> 
+lendsqr-fe-test 
+</h1>
 
 
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -106,7 +109,7 @@ $ npm run build
 
 
 <br>
- 
+
 ## Help
 
 <p>
